@@ -20,12 +20,3 @@ sed -i 's/OpenWrt/MineRouter/g' package/base-files/files/bin/config_generate
 #修正连接数（by ベ七秒鱼ベ）
 sed -i '/customized in this file/a net.netfilter.nf_conntrack_max=165535' package/base-files/files/etc/sysctl.conf
 
-#加入argon config
-cd lede/package/lean
-rm -rf luci-app-argon-config
-git clone -b 18.06 https://github.com/jerrykuku/luci-app-argon-config.git luci-app-argon-config
-
-#加入新argon
-cd lede/package/lean
-rm -rf luci-theme-argon
-git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git luci-theme-argon
