@@ -20,10 +20,6 @@ sed -i 's/OpenWrt/MineRouter/g' package/base-files/files/bin/config_generate
 #修正连接数（by ベ七秒鱼ベ）
 sed -i '/customized in this file/a net.netfilter.nf_conntrack_max=165535' package/base-files/files/etc/sysctl.conf
 
-# 加入OpenClash核心
-chmod -R a+x $GITHUB_WORKSPACE/preset-clash-core.sh
-$GITHUB_WORKSPACE/preset-clash-core.sh
-
 #加入argon config
 cd lede/package/lean
 rm -rf luci-app-argon-config
