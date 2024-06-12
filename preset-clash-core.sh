@@ -13,8 +13,8 @@ mkdir -p feeds/luci/applications/luci-app-openclash/root/etc/openclash/core
 core_path="feeds/luci/applications/luci-app-openclash/root/etc/openclash/core"
 goe_path="feeds/luci/applications/luci-app-openclash/root/etc/openclash"
 
-wget -qO- https://raw.githubusercontent.com/vernesong/OpenClash/core/master/meta/clash-linux-amd64.tar.gz | tar xOvz > $core_path/clash_meta
-wget -qO- https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geoip.dat > $goe_path/GeoIP.dat
-wget -qO- https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat > $goe_path/GeoSite.dat
+wget  https://raw.githubusercontent.com/vernesong/OpenClash/core/master/meta/clash-linux-amd64.tar.gz | tar xOvz > feeds/luci/applications/luci-app-openclash/root/etc/openclash/core/clash_meta
+wget  https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geoip.dat > feeds/luci/applications/luci-app-openclash/root/etc/openclash/GeoIP.dat
+wget  https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat > feeds/luci/applications/luci-app-openclash/root/etc/openclash/GeoSite.dat
 
-chmod +x $core_path/clash*
+chmod +x feeds/luci/applications/luci-app-openclash/root/etc/openclash/core/clash*
