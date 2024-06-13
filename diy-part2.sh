@@ -28,5 +28,7 @@ git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/luc
 
 git clone -b 18.06 https://github.com/jerrykuku/luci-app-argon-config.git package/luci-app-argon-config
 
+echo "
 CONFIG_PACKAGE_luci-theme-argon=y
 CONFIG_PACKAGE_luci-app-argon-config=y
+" >> .config
