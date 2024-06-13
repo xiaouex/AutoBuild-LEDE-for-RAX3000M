@@ -9,13 +9,13 @@
 #=================================================
 
 echo -e "预置Clash内核"
-mkdir -p feeds/luci/applications/luci-app-openclash/root/etc/openclash/core/clash_meta
-core_path="feeds/luci/applications/luci-app-openclash/root/etc/openclash/core"
-goe_path="feeds/luci/applications/luci-app-openclash/root/etc/openclash"
+mkdir -p $GITHUB_WORKSPACE/openwrt/feeds/luci/applications/luci-app-openclash/root/etc/openclash/core/clash_meta
+core_path="$GITHUB_WORKSPACE/openwrt/feeds/luci/applications/luci-app-openclash/root/etc/openclash/core"
+goe_path="$GITHUB_WORKSPACE/openwrt/feeds/luci/applications/luci-app-openclash/root/etc/openclash"
 
-wget  https://raw.githubusercontent.com/vernesong/OpenClash/core/master/meta/clash-linux-arm64.tar.gz -P feeds/luci/applications/luci-app-openclash/root/etc/openclash/core && tar -zxvf feeds/luci/applications/luci-app-openclash/root/etc/openclash/core/clash-linux-arm64.tar.gz -C feeds/luci/applications/luci-app-openclash/root/etc/openclash/core/clash_meta
+wget  https://raw.githubusercontent.com/vernesong/OpenClash/core/master/meta/clash-linux-arm64.tar.gz -P $core_path && tar -zxvf $core_path/clash-linux-arm64.tar.gz -C $core_path/clash_meta
 
-wget  https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geoip.dat > feeds/luci/applications/luci-app-openclash/root/etc/openclash/GeoIP.dat
-wget  https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat > feeds/luci/applications/luci-app-openclash/root/etc/openclash/GeoSite.dat
+wget  https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geoip.dat > $goe_path/GeoIP.dat
+wget  https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat > $goe_path/GeoSite.dat
 
-chmod +x feeds/luci/applications/luci-app-openclash/root/etc/openclash/core/clash*
+chmod +x $core_path/clash_meta*
