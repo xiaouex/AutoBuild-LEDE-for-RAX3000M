@@ -26,4 +26,4 @@ sed -i '/customized in this file/a net.netfilter.nf_conntrack_max=165535' packag
 chmod -R a+x $GITHUB_WORKSPACE/preset-clash-core.sh
 $GITHUB_WORKSPACE/preset-clash-core.sh
 
-
+cp -f $GITHUB_WORKSPACE bg1.jpg $GITHUB_WORKSPACE/openwrt/feeds/luci/themes/luci-theme-argone/htdocs/luci-static/argon/img/bg1.jpg
