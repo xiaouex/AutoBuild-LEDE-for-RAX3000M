@@ -1,9 +1,8 @@
-#加入argon config
-cd $GITHUB_WORKSPACE/openwrt/package/feeds/kenzo
-rm -rf luci-app-argon-config
-git clone -b 18.06 https://github.com/jerrykuku/luci-app-argon-config.git luci-app-argon-config
+git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lean/luci-theme-argon
 
-#加入新argon
-cd $GITHUB_WORKSPACE/openwrt/package/feeds/kenzo
-rm -rf luci-theme-argon
-git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git luci-theme-argon
+rm -rf feeds/kenzo/luci-theme-argon
+
+
+git clone -b 18.06 https://github.com/jerrykuku/luci-app-argon-config.git package/lean/luci-app-argon-config
+
+rm -rf feeds/kenzo/luci-app-argon-config
