@@ -68,14 +68,14 @@ jobs:
     - name: Update feeds
       run: cd openwrt && ./scripts/feeds update -a
 
-    - name: Install feeds
-      run: cd openwrt && ./scripts/feeds install -a
-
     - name: Load custom configuration 3
       run: |
        chmod +x $DIY_P3_SH
        cd openwrt
        $GITHUB_WORKSPACE/$DIY_P3_SH
+
+    - name: Install feeds
+      run: cd openwrt && ./scripts/feeds install -a
 
     - name: Load custom configuration
       run: |
