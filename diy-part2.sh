@@ -28,6 +28,6 @@ sed -i '/customized in this file/a net.netfilter.nf_conntrack_max=165535' packag
 
 cp -f $GITHUB_WORKSPACE/bg1.jpg $GITHUB_WORKSPACE/openwrt/feeds/kenzo/luci-theme-argone/htdocs/luci-static/argone/img/bg1.jpg
 
-echo "
-CONFIG_DEFAULT_bridger=y
-" >> .config
+#echo "
+#CONFIG_DEFAULT_bridger=y
+#" >> .config
