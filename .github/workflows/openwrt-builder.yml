@@ -23,6 +23,7 @@ env:
   CONFIG_FILE: .config
   DIY_P1_SH: diy-part1.sh
   DIY_P2_SH: diy-part2.sh
+  DIY_P3_SH: diy-part3.sh
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   UPLOAD_RELEASE: true
@@ -67,7 +68,10 @@ jobs:
     - name: Update feeds
       run: cd openwrt && ./scripts/feeds update -a 
     - name: Install feeds
-      run: cd openwrt && ./scripts/feeds install -a
+      run: |
+        chmod +x $DIY_P3_SH
+        cd openwrt
+        $GITHUB_WORKSPACE/$DIY_P3_SH
 
     - name: Load custom configuration
       run: |
