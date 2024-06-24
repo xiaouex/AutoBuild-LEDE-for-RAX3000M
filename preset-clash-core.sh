@@ -9,9 +9,9 @@
 #=================================================
 
 echo -e "预置Clash内核"
-mkdir -p $GITHUB_WORKSPACE/openwrt/feeds/luci/applications/luci-app-openclash/root/etc/openclash/core
-core_path="$GITHUB_WORKSPACE/openwrt/feeds/luci/applications/luci-app-openclash/root/etc/openclash/core"
-goe_path="$GITHUB_WORKSPACE/openwrt/feeds/luci/applications/luci-app-openclash/root/etc/openclash"
+mkdir -p $GITHUB_WORKSPACE/openwrt/feeds/kenzo/luci-app-openclash/root/etc/openclash/core
+core_path="$GITHUB_WORKSPACE/openwrt/feeds/kenzo/luci-app-openclash/root/etc/openclash/core"
+goe_path="$GITHUB_WORKSPACE/openwrt/feeds/kenzo/luci-app-openclash/root/etc/openclash"
 
 wget -qO- https://raw.githubusercontent.com/vernesong/OpenClash/core/master/meta/clash-linux-arm64.tar.gz | tar -xOvz > $core_path/clash_meta
 
