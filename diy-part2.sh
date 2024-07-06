@@ -28,6 +28,6 @@ $GITHUB_WORKSPACE/preset-clash-core.sh
 
 cp -f $GITHUB_WORKSPACE/bg1.jpg $GITHUB_WORKSPACE/openwrt/feeds/kenzo/luci-theme-argone/htdocs/luci-static/argone/img/bg1.jpg
 
-#echo "
-#CONFIG_PACKAGE_bridger=y
-#" >> .config
+echo "
+CONFIG_PACKAGE_bridger=y
+" >> .config
