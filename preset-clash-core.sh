@@ -14,7 +14,6 @@ core_path="$GITHUB_WORKSPACE/openwrt/feeds/kenzo/luci-app-openclash/root/etc/ope
 goe_path="$GITHUB_WORKSPACE/openwrt/feeds/kenzo/luci-app-openclash/root/etc/openclash"
 
 unzip $GITHUB_WORKSPACE/clash_meta.zip -d $core_path
-
 wget -qO- https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geoip.dat > $goe_path/GeoIP.dat
 wget -qO- https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat > $goe_path/GeoSite.dat
 
