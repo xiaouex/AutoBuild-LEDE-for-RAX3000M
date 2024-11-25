@@ -12,10 +12,10 @@
 
 # Modify default IP
 sed -i 's/192.168.1.1/10.0.0.1/g' package/base-files/files/bin/config_generate
-
+sed -i 's/192.168.1.1/10.0.0.1/g' package/base-files/luci2/bin/config_generate
 # Modify hostname
 sed -i 's/LEDE/MineRouter/g' package/base-files/files/bin/config_generate
-
+sed -i 's/LEDE/MineRouter/g' package/base-files/luci2/bin/config_generate
 # 修改默认主题
 sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
 
