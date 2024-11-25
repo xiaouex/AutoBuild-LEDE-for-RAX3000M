@@ -9,9 +9,9 @@
 #=================================================
 
 echo -e "预置Clash内核"
-mkdir -p $GITHUB_WORKSPACE/openwrt/feeds/kenzo/luci-app-openclash/root/etc/openclash/core
-core_path="$GITHUB_WORKSPACE/openwrt/feeds/kenzo/luci-app-openclash/root/etc/openclash/core"
-goe_path="$GITHUB_WORKSPACE/openwrt/feeds/kenzo/luci-app-openclash/root/etc/openclash"
+mkdir -p $GITHUB_WORKSPACE/openwrt/feeds/small/luci-app-openclash/root/etc/openclash/core
+core_path="$GITHUB_WORKSPACE/openwrt/feeds/small/luci-app-openclash/root/etc/openclash/core"
+goe_path="$GITHUB_WORKSPACE/openwrt/feeds/small/luci-app-openclash/root/etc/openclash"
 
 unzip $GITHUB_WORKSPACE/clash_meta.zip -d $core_path
 wget -qO- https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geoip.dat > $goe_path/GeoIP.dat
